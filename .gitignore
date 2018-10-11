@@ -1,0 +1,2 @@
+# Ignore database configuration
+app/config/db_config.php
