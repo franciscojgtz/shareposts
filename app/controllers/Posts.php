@@ -18,4 +18,16 @@
 
             $this->view('posts/index', $data);
         }
+
+        public function add(){
+            // Get posts
+            $posts = $this->postModel->getPosts();
+
+            $data = [
+                'title' => '',
+                'body' => ''
+            ];
+
+            $this->view('posts/add', $data);
+        }
     }
