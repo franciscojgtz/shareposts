@@ -1,5 +1,11 @@
 <?php
     class Posts extends Controller {
+        public function __construct() {
+            if(!isLoggedin()) {
+                redirect('users/login');
+            }
+        }
+
         public function index() {
             $data = [];
 
